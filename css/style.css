@@ -39,9 +39,10 @@ body {
   padding-left: 0.05em;
   align-items: center;
   font-size: 1.5em;
+
   background-size: cover;
   background-position: top left;
-  transition: all ease-in-out 15ms;
+  transition: all ease-in-out 100ms;
   position: relative;
   z-index: 10;
 }
@@ -56,12 +57,11 @@ body {
 }
 .wig-name{
   justify-content:flex-start;
-}
-.portfolio-item.medium.wig-name{
+  background-blend-mode: darken;
   background-image: url("../images/aboutme.JPG");
-  /* background-size: cover; */
+  background-position: center;
   object-fit: contain;
-  
+  transition: background-blend-mode ease-in-out 120ms;
 }
 .medium.name{
   align-self: flex-start;
@@ -81,13 +81,15 @@ body {
   /* transform: translate(0,-1.25em); */
 }
 .medium.name.contact-me{
-
-  transition: opacity ease-in-out 150ms;
+  transition: opacity ease-in-out 25ms;
   font-size: 0.8em;
   opacity: 0;
 }
-.medium:hover .medium.name.contact-me {
+.wig-name:hover .medium.name.contact-me {
   opacity: 1;
+}
+.wig-name:hover{
+  background-blend-mode: normal;
 }
 .portfolio-item.large {
   grid-row: span 3;
@@ -104,6 +106,14 @@ body {
 .portfolio-item:hover {
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+  background-blend-mode: none;
+}
+.wig-pic{
+  justify-content:flex-start;
+  background-blend-mode: multiply;
+  background-image: url("../images/me2.JPG");
+  background-position: center;
+  object-fit: contain;
 }
  #unique{
    color: rgba(249,104,85,1);
