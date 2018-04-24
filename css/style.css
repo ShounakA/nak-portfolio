@@ -44,7 +44,7 @@ body {
   opacity: 0.35;
   background-size: cover;
   background-position:center;
-  transition: all ease-in-out 100ms;
+  transition: all ease-in-out 300ms;
   position: relative;
   z-index: 10;
 }
@@ -64,7 +64,7 @@ body {
   background-position: center;
   object-fit: contain;
   opacity: 0.35;
-  transition: background-blend-mode ease-in-out 120ms;
+  transition: background-blend-mode ease-in-out 300ms;
 }
 .medium.name{
   align-self: flex-start;
@@ -81,14 +81,13 @@ body {
   text-align: left;
   font-size: 1.5em;
 
-  /* transform: translate(0,-1.25em); */
 }
 .medium.name.contact-me{
-  transition: opacity ease-in-out 25ms;
+  transition: opacity ease-in-out 300ms;
   font-size: 0.8em;
   opacity: 0;
 }
-.wig-name:hover .medium.name.contact-me,.wig-name:active .medium.name.contact-me {
+.wig-name:hover .medium.name.contact-me,.wig-name:focus .medium.name.contact-me {
   opacity: 1;
 }
 .wig-name:hover{
@@ -127,9 +126,13 @@ body {
   padding-left: 0.5em;
   text-align: center;
 }
+.cat{
+  opacity:1;
+  transition: opacity 300ms ease-in-out;
+}
 .contents{
   opacity:0;
-  transition: opacity 100ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
  #unique{
    color: rgba(249,104,85,1);
