@@ -105,7 +105,7 @@ body {
   grid-row: span 2;
   grid-column: span 3;
 }
-.portfolio-item:hover, .portfolio-item:active{
+.portfolio-item:hover, .portfolio-item:focus{
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
   background-blend-mode: none;
