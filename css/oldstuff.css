@@ -1,0 +1,105 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(0,1fr);
+  position:relative;
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.social-buttons .wrapper {
+  list-style: none;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height
+  and float them to left and set its border and border-radius.
+ */
+.social-buttons {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #D8E2DC;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px
+to align it properly */
+.social-buttons .wrapper .fa {
+  color: #D8E2DC;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.social-buttons .wrapper .fb:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.social-buttons .wrapper .fb:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*github*/
+.social-buttons .wrapper .gh:hover.github {
+  border: 5px solid #000000;
+  box-shadow: 0 0 15px #000000;
+  transition: all 0.5s ease;
+}
+
+.social-buttons .wrapper .gh:hover .fa-github {
+  color: #000000;
+  text-shadow: 0 0 15px #000000;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.social-buttons .wrapper .in:hover.instagram {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.social-buttons .wrapper .in:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 640px){
+  .social-buttons {
+      width: 350px;
+  }
+  .social-buttons .wrapper .social-buttons{
+      margin-top: 10px;
+  }
+  .social-buttons .wrapper .social-buttons.gh.github{
+      margin-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 340px){
+  .social-buttons {
+      width: 150px;
+  }
+  .social-buttons .wrapper .social-buttons{
+      margin:15px;
+  }
+  .social-buttons .wrapper .social-buttons.gh.github{
+      margin-left: 15px;
+  }
+}
