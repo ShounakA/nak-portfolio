@@ -89,7 +89,6 @@ body {
   font-size: 0.8em;
   opacity: 0;
 }
-
 .portfolio-item.large {
   grid-row: span 3;
   grid-column: span 3;
@@ -111,7 +110,6 @@ body {
   padding-left: 0.5em;
   text-align: center;
 }
-
  #unique{
    color: rgba(249,104,85,1);
    text-decoration: none;
@@ -131,9 +129,28 @@ body {
    opacity:0;
    transition: opacity 300ms ease-in-out;
  }
-
+ .wig-pic-1{
+   justify-content:center;
+   background-blend-mode: multiply;
+   background-image: url("../images/bigsquaa.JPG");
+   opacity: 0.35;
+   object-fit: contain;
+ }
+ .wig-pic-tall{
+   justify-content:center;
+   background-blend-mode: multiply;
+   background-image: url("../images/tall2.JPG");
+   opacity: 0.35;
+   object-fit: fill;
+ }
+ .wig-pic-wide{
+   justify-content:center;
+   background-blend-mode: multiply;
+   background-image: url("../images/squad-wide.JPG");
+   opacity: 0.35;
+   object-fit: fill;
+ }
 /* Transitions and Hovers*/
-
 .portfolio-item.small.wig-connect .linkedin:hover .fa-linkedin {
   color: #0077B5;
   text-shadow: 0 0 15px #0077B5;
