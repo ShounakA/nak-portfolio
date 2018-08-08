@@ -2,7 +2,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  background: #eee;
+  background: #FBFBFF;
   height: auto;
 }
 h1{
@@ -14,7 +14,7 @@ h1{
 h2{
   font-weight: 400;
   font-size: 1.2rem;
-  
+
 }
 img{
   display: block;
@@ -43,21 +43,30 @@ main{
   color: #888;
 }
 #landing-pic{
-  background: url("https://source.unsplash.com/dDLEvWzehac");
+  background-image: url("../images/me2.JPG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
   flex: 0 1 60vw;
-  margin: 0;
+  margin: 5px;
+  border-radius: 10px;
 }
 
+#underline{
+  border-top-style: none;
+   border-right-style: none;
+   border-bottom-style: solid;
+   border-left-style: none;
+   border: 0.5px solid black;
+   margin : 20px;
+}
 /* Floating Button*/
 .floating-button{
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: #db4437;
+  background: #0496FF;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -105,7 +114,17 @@ main{
   animation-fill-mode: forwards;
 }
 
-
+#adj{
+  color: #0496FF;
+}
+.content{
+  background: #FFF;
+  padding: 8px;
+  text-align: center;
+}
+#About{
+  text-align: center;
+}
 
 /*  After 500px change view*/
 
@@ -119,6 +138,9 @@ main{
   }
   #landing-pic{
       height: 100vh;
+  }
+  #underline{
+    display: none;
   }
 }
 

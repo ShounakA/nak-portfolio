@@ -3,7 +3,7 @@ function loadAdj(func){
     setInterval(func, 3000);
 }
 loadAdj (function(){
-  var adj = ["Developer", "Gamer", "Student", "Blockchain Enthusiat" ];
+  var adj = ["Developer", "Gamer", "Engineering Student", "Blockchain Enthusiat" ];
   document.getElementById("adj").innerHTML = adj[i%adj.length];
     i++;
     if (i>=adj.length){
