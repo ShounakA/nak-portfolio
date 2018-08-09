@@ -12,11 +12,13 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="container-floating">
     <div class="floating-button">
-      <a href="#About"  id="view-work" class="plus"><i class="material-icons">keyboard_arrow_down</i></a>
+      <a id="view-work" class="plus"><i class="material-icons">keyboard_arrow_down</i></a>
 
     </div>
 
@@ -30,7 +32,11 @@
          <h2>I am a <span id="adj">Developer</span>.</h2>
          <div id="underline"></div>
         </div>
-
+        <div class="socialmedia">
+            <a href="https://www.linkedin.com/in/shounak-amladi-74b575113"class="fa fa-linkedin"></a>
+            <a href="https://github.com/ShounakA/"class="fa fa-github"></a>
+            <a href="https://www.instagram.com/shounakamladi/"class="fa fa-instagram"></a>
+        </div>
       </div>
 
       <div id="landing-pic">
@@ -41,37 +47,55 @@
     <div class="content">
       <div id="About">
         <h3>About</h3>
-        <p>I am a software engineering student who loves to game and code.<br> Have a look around!</p>
-         <img src="https://source.unsplash.com/1600x900/?skyline,clouds" alt="">
+        <p>I am a software engineering student who loves to code and game.<br> Have a look around!</p>
+         <img src="../images/bigsquaa.JPG" alt="">
         <!-- Enter pic of myself to show peeps -->
         <!-- Resume download -->
       </div>
       <div id="Projects">
         <h3>Cool Stuff</h3>
         <!--  Enter some BS here about you projects-->
-        <img src="https://source.unsplash.com/1600x900/?nature,clouds" alt="">
-      </div>
-      <div id="Contact">
-        <!--  Enter some social media links -->
-          <!-- add cool button and shit -->
-        <div class="socialmedia">
-          <div class="socialmedia link">
-            <!-- cool icon -->
+        <div class="proj-grid">
+          <div class="cell grid-cell">
+            <div class="top grid-cell" id="kNN">
+            </div>
+            <div class="bottom grid-cell">
+              <p id="adj">kNN Framework</p>
+            </div>
           </div>
-          <div class="socialmedia email">
-            <!-- cool icon -->
+          <div class="cell grid-cell">
+            <div class="top grid-cell" id="Dwip">
+            </div>
+            <div class="bottom grid-cell">
+              <p id="adj">Data Stuff WIP</p>
+            </div>
           </div>
-          <div class="socialmedia insta">
-            <!--cool icon -->
+          <div class="cell grid-cell">
+            <div class="top grid-cell" id="not">
+            </div>
+            <div class="bottom grid-cell">
+              <p id="adj">Not</p>
+            </div>
+          </div>
+          <div class="cell grid-cell">
+            <div class="top grid-cell" id="filler">
+            </div>
+            <div class="bottom grid-cell">
+              <p id="adj">Filler</p>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </main>
 
   <footer>
     <!--   ALL  OMEAGALUL -->
-    <span>C OMEAGALUL PYRIGHT 2018 </span>
+
+    <div>
+      <p>C <img  id="kappa" src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0"> PYRIGHT 2018 </p>
+    </div>
   </footer>
 
 
