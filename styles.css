@@ -16,6 +16,9 @@ h2{
   font-size: 1.2rem;
 
 }
+h3{
+  color:#0496FF;
+}
 img{
   display: block;
   width: 100%;
@@ -23,8 +26,7 @@ img{
 main{
   max-width: 900px;
   margin: auto;
-  box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
-  -30px 0px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px #666;
 }
 #landing{
   background: #fff;
@@ -71,7 +73,7 @@ main{
   bottom: 30px;
   right: 30px;
   cursor: pointer;
-  box-shadow: 0px 2px 5px #666;
+  box-shadow: 0px 2px 15px #666;
 }
 
 .plus{
@@ -126,6 +128,104 @@ main{
   text-align: center;
 }
 
+/*  cool stuff section*/
+.proj-grid{
+  display: grid;
+  grid-template-columns:repeat(2, 1fr );
+   grid-template-rows: repeat(2, 1fr );
+  grid-column-gap: 2vw;
+  grid-row-gap: 3vh;
+  height: 50vh;
+}
+ .cell{
+   background-color: #FFF;
+   border-radius: 2px;
+   transition: box-shadow 0.3s ease-in;
+   padding: 5px;
+ }
+ .cell:hover{
+   box-shadow: 0px 0px 10px #666;
+ }
+.grid-cell{
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  /* height: 60vh; */
+  height: 100%;
+  width: 100%;
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  flex: 0 1 80%;
+}
+
+.bottom{
+  /* height: 40vh; */
+  vertical-align: middle;
+  flex: 1 1 20%;
+
+}
+#kNN{
+  background-image: url("https://source.unsplash.com/8OyKWQgBsKQ");
+}
+#Dwip{
+  background-image: url("https://source.unsplash.com/n6B49lTx7NM");
+}
+#not{
+  background-image: url("https://source.unsplash.com/b18TRXc8UPQ");
+}
+
+#filler{
+  background-image: url("https://source.unsplash.com/P2SkP_PXhlU");
+}
+
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+    box-shadow: 0px 0px 10px #666;
+}
+
+/* Set a specific color for each brand */
+
+.fa .fa-github{
+  font-size: 5em;
+}
+.fa-github {
+    background: #0496FF;
+    color: white;
+
+}
+
+.fa-instagram {
+    background: #0496FF;
+    color: white;
+}
+.fa-linkedin {
+    background: #0496FF;
+    color: white;
+}
+
+#kappa{
+  height: 30px;
+  width: 30px;
+  align-vertical: center;
+  object-fit: none;
+  display: inline;
+}
 /*  After 500px change view*/
 
 @media (min-width:500px) {
@@ -142,7 +242,9 @@ main{
   #underline{
     display: none;
   }
+
 }
+
 
 Screen Sizes 700px and Up
 @media (min-width: 700px) {
@@ -154,4 +256,12 @@ Screen Sizes 700px and Up
     line-height: 100px;
     font-size: 43px;
   }
+
+}
+@media (min-width:540px){
+  .proj-grid{
+    grid-template-columns:repeat(4, 1fr );
+    grid-template-rows: repeat(1, 1fr );
+    height: 25vh;
+   }
 }
