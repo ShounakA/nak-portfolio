@@ -1,11 +1,14 @@
+var places = ["#About", "#Projects", "#landing"];
+var count=0;
 jQuery(function(){
   var location;
   $('#view-work').on('click', function() {
-    location = $('#About').position().top;
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-      location = $('#landing').position().top;
-    }
+    location = $(places[count]).position().top;
     $('html, body').animate({scrollTop: location},900 );
+    count++;
+    if (count>2){
+      count=0;
+    }
   });
 
 
