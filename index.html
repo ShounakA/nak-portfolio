@@ -4,11 +4,13 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title> Shounak Amladi</title>
 </head>
@@ -21,29 +23,48 @@
           <div id="mx-auto wrapper container" style="width: 100vw;">
               <!-- MY STUFF HERE, STYLED WITH MY CSS -->
               <div class="primary-text title container">
-                  <span>< ></span> Shounak
+                  <span class="name-inline">< ></span> Shounak
                   
                 </div>
-                <div class="mx-auto container">
-                  <img class="center" src="images/Rocket.svg"/>
+                <div class="socialmedia">
+                    <a href="https://www.linkedin.com/in/shounak-amladi-74b575113"class="fa fa-linkedin" alt="linkedin"></a>
+                    <a href="https://github.com/ShounakA/"class="fa fa-github" alt="github"></a>
                 </div>
-                <div class="center" style=" justify-content: center">
-                    <div class="mx-auto card-deck projects" style=" justify-content: center"> 
-                        <div class="card primary project shadow-sm rounded">
-                          <div class="card-body">Project 1</div>
+                <div class="container">
+                  <div class="card-deck project" style=" justify-content: center"> 
+                      <div class="card primary project shadow-sm rounded">
+                        <div class="card-body">
+                            <img src="images/2048clone.png"  class="card-img-top" alt="the first un-styled, 2048 clone">
+                          <div class="card-title">2048</div>
+                          <div class="card-text">This is a random project, I wrote when I got bored. I figured the array sliding algorithm would be a fun challenge to kill my boredom.</div>
+                          <a href="https://github.com/ShounakA/2048clone" class="btn btn-warning">View Source</a>
+                          <a href="/2048clone" class="btn btn-warning">Demo</a>
+                        </div>
+                      </div>
+                      <div class="card primary project shadow-sm rounded">
+                          <img src="images/EJA.jpg" class="card-img-top"  alt="This is the birth of the assitant">
+                          <div class="card-body">
+                              <div class="card-title">EJA</div>
+                              <div class="card-text">This project is WIP. It is making a machine that plays the guitar.</div>
+                              <a href="https://github.com/ShounakA/4thYearML" class="btn btn-warning">View Source</a>
+                            </div>
                         </div>
                         <div class="card primary project shadow-sm rounded">
-                            <div class="card-body">Project 2</div>
+                            <img src="images/cellphone.jpg" class="card-img-top" alt="Photo by Caspar Camille Rubin on Unsplash">
+                            <div class="card-body">
+                                <div class="card-title">Sellphone</div>
+                                <div class="card-text">This project is WIP. A place to sell and buy used phones</div>
+                                <a href="#" class="btn btn-warning">View Source</a>
+                              </div>
+                            
                           </div>
-                          <div class="card primary project shadow-sm rounded">
-                              <div class="card-body">Project 3</div>
-                            </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
+
                 
                   <!-- <div id="particles-js"></div> -->
-                <div class="moon container">
-                  <img class="moon-image" src="images/Moon.svg"/>
+                <div class="moon">
+                  <img  id="moon-image" src="images/Moon.svg"/>
                 </div>
           </div>
       </div>
@@ -54,7 +75,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script  src="./main.js"></script>
+    <script  src="main.js"></script>
     <script src="particles.min.js"> </script>
     <script>
         particlesJS.load('particles-js', 'assets/particles.json', function() {

@@ -3,13 +3,21 @@ $(document).ready(function() {
    console.log("document is ready");
      
    
-     $( ".card" ).hover(
+     $( ".project" ).click(
      function() {
-       $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+       $(this).addClass('shadow-lg','project-open').css('cursor', 'pointer'); 
+       console.log('dont');
      }, function() {
-       $(this).removeClass('shadow-lg');
+       $(this).removeClass('shadow-lg','project-open');
      }
-   );
+     });
+  //  $( ".card" ).touch(
+  //   function() {
+  //     $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+  //   }, function() {
+  //     $(this).removeClass('shadow-lg');
+  //   }
+  // );
      
    // document ready  
    });
