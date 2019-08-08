@@ -1,107 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  <title>Shounak Amladi</title>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <!-- Add icon library -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title> Shounak Amladi</title>
 </head>
-<body>
-  <div class="container-floating">
-    <div class="floating-button">
-      <a id="view-work" class="plus"><i class="material-icons">keyboard_arrow_down</i></a>
+<body class="void-color">
+  <!-- <i class="material-icons title">code</i> -->
+  
+  <div class="mx-auto body-particles ">
 
-    </div>
+      <!-- Wrapper -->
+          <div id="mx-auto wrapper container" style="width: 100vw;">
+              <!-- MY STUFF HERE, STYLED WITH MY CSS -->
+              <div class="primary-text title container">
+                  <span class="name-inline">< ></span> Shounak
+                  
+                </div>
+                <div class="socialmedia">
+                    <a href="https://www.linkedin.com/in/shounak-amladi-74b575113"class="fa fa-linkedin" alt="linkedin"></a>
+                    <a href="https://github.com/ShounakA/"class="fa fa-github" alt="github"></a>
+                </div>
+                <div class="container">
+                  <div class="card-deck project" style=" justify-content: center"> 
+                      <div class="card primary project shadow-sm rounded">
+                        <div class="card-body">
+                            <img src="images/2048clone.png"  class="card-img-top" alt="the first un-styled, 2048 clone">
+                          <div class="card-title">2048</div>
+                          <div class="card-text">This is a random project, I wrote when I got bored. I figured the array sliding algorithm would be a fun challenge to kill my boredom.</div>
+                          <a href="https://github.com/ShounakA/2048clone" class="btn btn-warning">View Source</a>
+                          <a href="/2048clone" class="btn btn-warning">Demo</a>
+                        </div>
+                      </div>
+                      <div class="card primary project shadow-sm rounded">
+                          <img src="images/EJA.jpg" class="card-img-top"  alt="This is the birth of the assitant">
+                          <div class="card-body">
+                              <div class="card-title">EJA</div>
+                              <div class="card-text">This project is WIP. It is making a machine that plays the guitar.</div>
+                              <a href="https://github.com/ShounakA/4thYearML" class="btn btn-warning">View Source</a>
+                            </div>
+                        </div>
+                        <div class="card primary project shadow-sm rounded">
+                            <img src="images/cellphone.jpg" class="card-img-top" alt="Photo by Caspar Camille Rubin on Unsplash">
+                            <div class="card-body">
+                                <div class="card-title">Sellphone</div>
+                                <div class="card-text">This project is WIP. A place to sell and buy used phones</div>
+                                <a href="#" class="btn btn-warning">View Source</a>
+                              </div>
+                            
+                          </div>
+                    </div>
+                </div>
 
-  </div>
-  <main>
-    <!-- add floating next button -->
-    <div id="landing">
-      <div id="landing-text">
-        <div id="lending-text-inner">
-          <h1>Shounak Amladi</h1>
-         <h2>I am a <span id="adj">Developer</span>.</h2>
-         <div id="underline"></div>
-        </div>
-        <div class="socialmedia">
-            <a href="https://www.linkedin.com/in/shounak-amladi-74b575113"class="fa fa-linkedin"></a>
-            <a href="https://github.com/ShounakA/"class="fa fa-github"></a>
-            <a href="https://www.instagram.com/shounakamladi/"class="fa fa-instagram"></a>
-        </div>
-      </div>
-
-      <div id="landing-pic">
-        <!--  bg pic is in style -->
-        <!-- for now a fixed pic, later let it roate some insta pic  -->
-      </div>
-    </div>
-    <div class="content">
-      <div id="About">
-        <h3>About</h3>
-        <p>I am a software engineering student who loves to code and game.<br> Have a look around!</p>
-         <img src="../images/bigsquaa.JPG" alt="">
-        <!-- Enter pic of myself to show peeps -->
-        <!-- Resume download -->
-      </div>
-      <div id="Projects">
-        <h3>Cool Stuff</h3>
-        <!--  Enter some BS here about you projects-->
-        <div class="proj-grid">
-          <div class="cell grid-cell">
-            <div class="top grid-cell" id="kNN">
-            </div>
-            <div class="bottom grid-cell">
-              <p id="adj">kNN Framework</p>
-            </div>
+                
+                  <!-- <div id="particles-js"></div> -->
+                <div class="moon">
+                  <img  id="moon-image" src="images/Moon.svg"/>
+                </div>
           </div>
-          <div class="cell grid-cell">
-            <div class="top grid-cell" id="Dwip">
-            </div>
-            <div class="bottom grid-cell">
-              <p id="adj">Data Stuff WIP</p>
-            </div>
-          </div>
-          <div class="cell grid-cell">
-            <div class="top grid-cell" id="not">
-            </div>
-            <div class="bottom grid-cell">
-              <p id="adj">Not</p>
-            </div>
-          </div>
-          <div class="cell grid-cell">
-            <div class="top grid-cell" id="filler">
-            </div>
-            <div class="bottom grid-cell">
-              <p id="adj">Filler</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </main>
-
-  <footer>
-    <!--   ALL  OMEAGALUL -->
-
-    <div>
-      <p>C <img  id="kappa" src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0"> PYRIGHT 2018 </p>
-    </div>
-  </footer>
-
-
-  <script  type="text/javascript" src="js/main.js"></script>
-  <script  type="text/javascript" src="js/cycletest.js"></script>
-
-
-</body>
+  
+  <div id="particles-js"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script  src="main.js"></script>
+    <script src="particles.min.js"> </script>
+    <script>
+        particlesJS.load('particles-js', 'assets/particles.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+    </script>
+  </ody>
 </html>
