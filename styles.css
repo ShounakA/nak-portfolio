@@ -1,8 +1,8 @@
 .void-color{
-  background: #4F4F4F;
+  background: #0E0921;
 }
 .primary{
-  background: #F2F2F2;
+  background: #4F4F4F;
 }
 .primary-text{
   color: #EB5757;
@@ -15,22 +15,25 @@
   background: #EB5757;
 }
 .btn-primary:hover{
-  background: #4F4F4F;
-  border: #4F4F4F;
+  background: #0E0921;
+  border: #0E0921;
 }
-.btn-primary:active:hover{
-  background: #4F4F4F;
-  border: #4F4F4F;
+.btn.btn-primary:active{
+  background: #0E0921;
+  border: #0E0921;
 }
 .title{
-  display: inline;
+  display: inline-block;
   font-family: 'Nunito';
   font-style: normal;
   font-weight: normal;
-  /* font-size: 99px; */
   font-size: 3em;
-  line-height: 136px;
-
+}
+.landing-text{
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
 }
 .name-inline{
   display: inline-block;
@@ -48,16 +51,15 @@ img{
 }
 .socialmedia{
   margin-right: 1em;
-  font-size: 4em;
-  display: inline;
-  /* justify-content: center; */
-  float: right;
+  font-size: 1em;
+  display: inline-block;
 }
 .moon{
   position: fixed;
   z-index: -4;
 }
 #moon-image{
+  display: none;
   position: fixed;
   top:20%;
   right:30%;
@@ -71,101 +73,89 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
-/* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  width: 1em;
-  height: 1em;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  border-radius: 50%;
-  transition: box-shadow 0.3s ease-in;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-  box-shadow: 0px 0px 10px #666;
-  color: #4F4F4F;
-}
 
 /* Set a specific color for each brand */
+.fa-github-alt {
+  color: #EB5757;
+  background: #0E0921;
 
-.fa .fa-github{
-  /* font-size: 5em; */
-}
-.fa-github {
-  background: #EB5757;
-  color: #4F4F4F;
-
-}
-
-.fa-instagram {
-  background: #EB5757;
-  color: #4F4F4F;
 }
 .fa-linkedin {
-  background: #EB5757;
-  color: #4F4F4F;
+  color: #EB5757;
+  background: #0E0921;
+}
+.mini-text{
+  font-family: 'Fira Code', monospace;
+  font-size: .25em;
+  text-align: right;
+  /* line-height: 0px; */
+  color:#EA9E8D;
 }
 /*  After 500px change view*/
 
 @media (min-width:500px) {
   .title{
     font-size: 3em;
-    line-height: 136px;
+    /* line-height: 136px; */
   
   }
-
+  .mini-text{
+    font-size: .25em;
+    text-align: right;
+    /* line-height: 0px; */
+  }
+  .filler-2{
+    padding: 2em;
+  }
+  
 }
 
 
-/* Screen Sizes 700px and Up */
+/* Desktop: Screen Sizes 700px and Up */
 @media (min-width: 700px) {
   .title{
     font-size: 6em;
-    line-height: 136px;
+    /* line-height: 136px; */
   
   }
+  .mini-text{
+    font-size: .25em;
+    text-align: right;
+    /* line-height: 0px; */
+  }
   #moon-image{
+    display: block;
     position: fixed;
     top:30%;
     right:35%;
   }
   .socialmedia{
-    font-size: 6em;
+    font-size: 3em;
+  }
+  .navbar{
+    justify-content: space-around;
+  }
+  .filler-2{
+    padding: 4em;
+  }
+  .filler{
+    padding: 2em;
+  }
+}
+@media (min-width:540px){
+  .navbar{
+    justify-content: column;
+  }
+  .mini-text{
+    font-size: .25em;
+    text-align: right;
+    /* line-height: 0px; */
+  }
+  .filler-2{
+    padding: 2em;
   }
 }
 
-}
-@media (min-width:540px){
-
-}
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
 #particles-js{
   width: 100%;
   height: 100%;
@@ -181,4 +171,61 @@ img{
   top: 0;
   left: 0;
   z-index: 100;
+}
+.main-icon{
+  display: inline;
+}
+.navbar{
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: space-between;
+}
+.filler{
+  padding: 0.5em;
+}
+.filler-2{
+  padding: 2em;
+}
+#hey-intro{
+  text-align: left
+}
+
+.card-text{
+  color: #EA9E8D;
+}
+.card-title{
+  font-size: 35px;
+  color: #EB5757;
+}
+p.landing-text{
+  font-size: .5em;
+ 
+}
+mark{
+ background: #EA9E8D;
+ color: #EB5757;
+}
+p.mini-text{
+  text-align: start;
+  font-size: 0.4em;
+  color: #EA9E8D;
+}
+#contactme{
+  font-size: 0.4em;
+}
+.lib-text{
+  color: #EA9E8D;
+  font-family: 'Fira Code', monospace;
+}
+.vertical-flex{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:nowrap;
+  /* justify-content: space-evenly; */
+  align-content: center;
+}
+.v-flex-items{
+  flex-grow: 1;
+  flex-shrink: 1;
 }
