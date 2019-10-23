@@ -84,6 +84,10 @@ img{
   color: #EB5757;
   background: #0E0921;
 }
+.fa-file {
+  color: #EB5757;
+  background: #0E0921;
+}
 .mini-text{
   font-family: 'Fira Code', monospace;
   font-size: .25em;
@@ -228,4 +232,7 @@ p.mini-text{
 .v-flex-items{
   flex-grow: 1;
   flex-shrink: 1;
+}
+a.fa:hover {
+  color: #EB5757;
 }
