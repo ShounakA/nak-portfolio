@@ -1,0 +1,47 @@
+[
+    {
+        "id": "P01",
+        "title":"NxN 2048 Game",
+        "wip": false,
+        "desc": "This is a quick project, and I had lots of fun with it. I figured the array sliding algorithm would be a fun challenge to kill my boredom.",
+        "hasSource": true,
+        "sourceLink": "https://github.com/ShounakA/2048clone",
+        "hasDemo": true,
+        "demoLink": "/2048clone",
+        "tools": [
+            "P5.js"
+        ]
+
+    },
+    {
+        "id": "P02",
+        "title":"Robotic Guitar Player",
+        "wip": true,
+        "desc": "It is making a machine that plays the guitar. It is comprised of a Rasberry Pi, STM32, 6 ESPs, 6 servos, and 6 steppers. To debug and setup the system I've developed a WebApp. Made with Flask and ReactJS.",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/4thYearML",
+        "hasDemo": false,
+        "tools": [
+            "React",
+            "Flask",
+            "Python",
+            "C"
+        ]
+
+    },
+    {
+        "id": "P03",
+        "title":"K Nearest Neighbour Analyzer",
+        "wip": false,
+        "desc": "Framework to visualize, test, and predict a k Nearest Nighbours model. Built a UI to load feature vectors and labels. Optionally can create a brand new feature vector, and load labels.",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/project-team-b",
+        "hasDemo": false,
+        "tools": [
+            "Java",
+            "JavaX Swing"
+        ]
+
+    }
+
+]

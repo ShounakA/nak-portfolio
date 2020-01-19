@@ -21,6 +21,18 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title> Shounak Amladi | Software Engineer</title>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script  src="main.js"></script>
+    <script src="particles.min.js"> </script>
+    <script>
+        particlesJS.load('particles-js', 'assets/particles.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+    </script>
 </head>
 <body class="void-color">
   <!-- <i class="material-icons title">code</i> -->
@@ -72,57 +84,41 @@
                     <div class="landing-text primary-text"> 
                       Projects
                     </div>
-                    <div class="card-deck project" style=" justify-content: center"> 
-                        <div class="card primary project shadow-sm rounded">
-                          <div class="card-body vertical-flex">
-                            <div class="card-title v-flex-items">
-                              <i class="fa fa-folder "></i>&nbsp;NxN 2048 Clone
-                            </div>
-                            <div class="card-text v-flex-items">This is a quick project, and I had lots of fun with it. I figured the array sliding algorithm would be a fun challenge to kill my boredom.</div>
-                            <div class="v-flex-items"> 
-                              <a href="https://github.com/ShounakA/2048clone" class="btn btn-primary">View Source</a>
-                              <a href="/2048clone" class="btn btn-primary">Demo</a>
-                            </div>
-                            <div class="v-flex-items"> 
-                              <a href="#" class="card-link lib-text">P5.js</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card primary project shadow-sm rounded ">
-                            <!-- <img src="images/EJA.jpg" class="card-img-top"  alt="This is the birth of the assitant"> -->
-                            <div class="card-body vertical-flex">
-                                <div class="card-title v-flex-items">
-                                    <i class="fa fa-folder-open"></i>&nbsp;Electronic Jam Assitant
-                                  </div>
-                                <div class="card-text v-flex-items">WIP! It is making a machine that plays the guitar. It is comprised of a Rasberry Pi, STM32, 6 ESPs, 6 servos, and 6 steppers. To debug and setup the system I've developed a WebApp. Made with Flask and ReactJS.</div>
-                                <div class="v-flex-items">
-                                  <a href="https://github.com/ShounakA/4thYearML" class="btn btn-primary">View Source</a>
-                                </div>
-                                <div class="v-flex-items"> 
-                                    <a href="#" class="card-link lib-text">React</a>
-                                    <a href="#" class="card-link lib-text">Flask</a>
-                                    <a href="#" class="card-link lib-text">Python</a>
-                                    <a href="#" class="card-link lib-text">C</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="card primary project shadow-sm rounded">
-                              <!-- <img src="images/cellphone.jpg" class="card-img-top" alt="Photo by Caspar Camille Rubin on Unsplash"> -->
-                              <div class="card-body vertical-flex">
-                                  <div class="card-title v-flex-items">
-                                      <i class="fa fa-folder"></i>&nbsp;KNN Framework and Analyzer
-                                    </div>
-                                  <div class="card-text v-flex-items">Framework to visualize, test, and predict a k Nearest Nighbours model. Built a UI to load feature vectors and labels. Optionally can create a brand new feature vector, and load labels.</div>
-                                  <div class="v-flex-items">  
-                                    <a href="#" class="btn btn-primary">View Source</a>
-                                  </div>
-                                  <div class="v-flex-items"> 
-                                      <a href="#" class="card-link lib-text">Java</a>
-                                      <a href="#" class="card-link lib-text">JavaX Swing</a>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                    <div id="projectList"class="card-deck project" style=" justify-content: center"> 
+                        <script> 
+                          projectData=[]
+                          icon=""
+                          fetch("contents.json")
+                                .then(response => response.json())
+                                .then(json => {
+                                  projectData=json;
+                                  projectData.forEach(element => {
+                                        $("#projectList").append("<div id='"+element.id+"' class='card primary project shadow-sm rounded'></div>")
+                                        if (element.wip)
+                                          icon = "fa-folder-open"
+                                        else
+                                          icon = "fa-folder"
+                                        card = " <div class='card-body vertical-flex'><div class='card-title v-flex-items'><i class='fa "
+                                                                +icon+"'></i>&nbsp;"+element.title+"</div><div class='card-text v-flex-items'>"
+                                                                  +element.desc+"</div><div class='v-flex-items'>";
+                                        if(element.hasSource){
+                                          card+="<a href='"+element.sourceLink+"' class='btn btn-primary'>View Source</a>"
+                                        }
+                                        if(element.hasDemo){
+                                          card+="<a href='"+element.demoLink+"' class='btn btn-primary'>Demo</a>"
+                                        }
+                                        card+="</div></div>"
+                                        $("#"+element.id).append(card);
+                                        node = $("#"+element.id + " .vertical-flex:first-child")
+                                        tools = "<div class='v-flex-items'> ";
+                                        element.tools.forEach(e =>{
+                                          tools += "<a href='#' class='card-link lib-text'>"+e+"</a>";
+                                        })
+                                        tools+="</div>";
+                                        node.append(tools);
+                                  });
+                                });
+                        </script>
                     </div>
                   </div>
                   <div> 
@@ -139,17 +135,6 @@
       </div>
   
   <div id="particles-js"></div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script  src="main.js"></script>
-    <script src="particles.min.js"> </script>
-    <script>
-        particlesJS.load('particles-js', 'assets/particles.json', function() {
-          console.log('callback - particles.js config loaded');
-        });
-    </script>
-  </ody>
+    
+  </body>
 </html>
