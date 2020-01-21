@@ -46,8 +46,10 @@ img{
   user-select: none;
 }
 .project{
+  display: flex;
  width: 100%;
-
+ flex-wrap: wrap;
+ flex-direction: row; 
 }
 .socialmedia{
   margin-right: 1em;
@@ -113,7 +115,12 @@ img{
   }
   
 }
-
+.project > div[class*='col-']{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: stretch;
+}
 
 /* Desktop: Screen Sizes 700px and Up */
 @media (min-width: 700px) {
@@ -145,6 +152,12 @@ img{
   .filler{
     padding: 2em;
   }
+  .card-title{
+    font-size: 20px;
+    color: #EB5757;
+  }
+  
+  
 }
 @media (min-width:540px){
   .navbar{

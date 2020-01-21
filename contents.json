@@ -15,9 +15,9 @@
     },
     {
         "id": "P02",
-        "title":"Robotic Guitar Player",
+        "title":"Robotic Guitar Player (RGP)",
         "wip": true,
-        "desc": "It is making a machine that plays the guitar. It is comprised of a Rasberry Pi, STM32, 6 ESPs, 6 servos, and 6 steppers. To debug and setup the system I've developed a WebApp. Made with Flask and ReactJS.",
+        "desc": "This is a group project consisting of 5 teammembers. The RGP allows the user to enter a song and play it, or can allow user to enter an external guitar to play along according to a specific genre.",
         "hasSource": true,
         "sourceLink":"https://github.com/ShounakA/4thYearML",
         "hasDemo": false,

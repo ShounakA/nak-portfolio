@@ -93,7 +93,7 @@
                                 .then(json => {
                                   projectData=json;
                                   projectData.forEach(element => {
-                                        $("#projectList").append("<div id='"+element.id+"' class='card primary project shadow-sm rounded'></div>")
+                                        $("#projectList").append("<div class='col-sm-5'><div id='"+element.id+"' class='card primary project shadow-sm rounded'></div></div>")
                                         if (element.wip)
                                           icon = "fa-folder-open"
                                         else
