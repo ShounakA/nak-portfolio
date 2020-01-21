@@ -42,6 +42,19 @@
             "JavaX Swing"
         ]
 
+    },
+    {
+        "id": "P04",
+        "title":"C++ Sudoku Solver Experiment",
+        "wip": false,
+        "desc": "An experiment to compare brute force and stochastic implementation of a Sudoku solver. You can find the results in the source below. 'Complete' with Unit Tests",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/cpp-sudoku-solver",
+        "hasDemo": false,
+        "tools": [
+            "C++",
+            "Catch2"
+        ]
     }
 
 ]
