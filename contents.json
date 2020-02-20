@@ -55,6 +55,22 @@
             "C++",
             "Catch2"
         ]
+    },
+    {
+        "id": "P05",
+        "title":"Major/Minor Chord/Note Classifier",
+        "wip": false,
+        "desc": "An experiment to see if a sampled sound is a single note, a major chord, or a minor chord. Using a multi-class CNN model, and generated chord and note sounds.",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/major-or-minor-chord-or-note",
+        "hasDemo": false,
+        "tools": [
+            "Python",
+            "Jupyter Notebook",
+            "Numpy",
+            "Tensorflow",
+            "Keras"
+        ]
     }
 
 ]
