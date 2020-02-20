@@ -58,7 +58,7 @@
     },
     {
         "id": "P05",
-        "title":"Major/Minor Chord Classifier",
+        "title":"Mj/Mn Chord Classifier",
         "wip": false,
         "desc": "An experiment to see if a sampled sound is a single note, a major chord, or a minor chord. Using a multi-class CNN model, and generated chord and note sounds.",
         "hasSource": true,
