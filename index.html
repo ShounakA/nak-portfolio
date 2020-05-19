@@ -93,18 +93,23 @@
                                   projectData=json;
                                   projectData.forEach(element => {
                                         $("#projectList").append("<div class='col-sm-5'><div id='"+element.id+"' class='card primary project shadow-sm rounded'></div></div>")
-                                        if (element.wip)
+                                        var toolTip=''
+                                        if (element.wip){
                                           icon = "fa-folder-open"
-                                        else
+                                          toolTip = 'WIP'
+                                        }
+                                        else{
                                           icon = "fa-folder"
+                                          toolTip = 'Completed'
+                                        }
                                         card = " <div class='card-body vertical-flex'><div class='card-title v-flex-items'><i class='fa "
-                                                                +icon+"'></i>&nbsp;"+element.title+"</div><div class='card-text v-flex-items'>"
+                                                                +icon+"' title="+toolTip+"></i>&nbsp;"+element.title+"</div><div class='card-text v-flex-items'>"
                                                                   +element.desc+"</div><div class='v-flex-items'>";
                                         if(element.hasSource){
-                                          card+="<a href='"+element.sourceLink+"' class='btn btn-primary'>View Source</a>"
+                                          card+="<a href='"+element.sourceLink+"' target='_blank' class='btn btn-primary'>View Source</a>"
                                         }
                                         if(element.hasDemo){
-                                          card+="<a href='"+element.demoLink+"' class='btn btn-primary'>Demo</a>"
+                                          card+="<a href='"+element.demoLink+"' target='_blank' class='btn btn-primary'>Demo</a>"
                                         }
                                         card+="</div></div>"
                                         $("#"+element.id).append(card);

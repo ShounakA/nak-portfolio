@@ -1,22 +1,40 @@
 [
     {
         "id": "P01",
-        "title":"NxN 2048 Game",
+        "title":"Mini Shopify",
         "wip": false,
-        "desc": "This is a quick project, and I had lots of fun with it. I figured the array sliding algorithm would be a fun challenge to kill my boredom.",
+        "desc": "Super simple application where users can signup to be merchants, setup stores, and sell products. As well as purchase products made by other merchants. The purchase itself will obviously be simulated, but purchases cannot exceed the inventory.",
         "hasSource": true,
-        "sourceLink": "https://github.com/ShounakA/2048clone",
+        "sourceLink":"https://github.com/ShounakA/SYSC4806_MiniShopify",
         "hasDemo": true,
-        "demoLink": "/2048clone",
+        "demoLink": "https://my-mini-shopify.herokuapp.com/",
         "tools": [
-            "P5.js"
+            "Spring Framework",
+            "Vue.js",
+            "Maven",
+            "Heroku",
+            "Travis CI",
+            "PostgreSQL"
         ]
-
     },
     {
         "id": "P02",
-        "title":"Robotic Guitar Player (RGP)",
+        "title":"Valorant Strategic Planner",
         "wip": true,
+        "desc": "Plan strategies for Valorant by placing Agents on the field, dragging them to different positions, and drawing out the planned move, smokes, and walls.",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/valorant-strategy-planner",
+        "hasDemo": true,
+        "demoLink": "https://shounaka.github.io/valorant-strategy-planner/",
+        "tools": [
+            "React JS",
+            "D3.js"
+        ]
+    },
+    {
+        "id": "P03",
+        "title":"Robotic Guitar Player (RGP)",
+        "wip": false,
         "desc": "This is a group project consisting of 5 teammembers. The RGP allows the user to enter a song and play it, or can allow user to enter an external guitar to play along according to a specific genre.",
         "hasSource": true,
         "sourceLink":"https://github.com/ShounakA/4thYearML",
@@ -30,31 +48,18 @@
 
     },
     {
-        "id": "P03",
-        "title":"K Nearest Neighbour Analyzer",
+        "id": "P04",
+        "title":"NxN 2048 Game",
         "wip": false,
-        "desc": "Framework to visualize, test, and predict a k Nearest Nighbours model. Built a UI to load feature vectors and labels. Optionally can create a brand new feature vector, and load labels.",
+        "desc": "This is a quick project, and I had lots of fun with it. I figured the array sliding algorithm would be a fun challenge to kill my boredom.",
         "hasSource": true,
-        "sourceLink":"https://github.com/ShounakA/project-team-b",
-        "hasDemo": false,
+        "sourceLink": "https://github.com/ShounakA/2048clone",
+        "hasDemo": true,
+        "demoLink": "/2048clone",
         "tools": [
-            "Java",
-            "JavaX Swing"
+            "P5.js"
         ]
 
-    },
-    {
-        "id": "P04",
-        "title":"C++ Sudoku Solver Experiment",
-        "wip": false,
-        "desc": "An experiment to compare brute force and stochastic implementation of a Sudoku solver. You can find the results in the source below. 'Complete' with Unit Tests",
-        "hasSource": true,
-        "sourceLink":"https://github.com/ShounakA/cpp-sudoku-solver",
-        "hasDemo": false,
-        "tools": [
-            "C++",
-            "Catch2"
-        ]
     },
     {
         "id": "P05",
@@ -69,6 +74,33 @@
             "Tensorflow",
             "Keras"
         ]
-    }
+    },
+    {
+        "id": "P06",
+        "title":"C++ Sudoku Solver Experiment",
+        "wip": false,
+        "desc": "An experiment to compare brute force and stochastic implementation of a Sudoku solver. You can find the results in the source below. 'Complete' with Unit Tests",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/cpp-sudoku-solver",
+        "hasDemo": false,
+        "tools": [
+            "C++",
+            "Catch2"
+        ]
+    },
+    {
+        "id": "P07",
+        "title":"K Nearest Neighbour Analyzer",
+        "wip": false,
+        "desc": "Framework to visualize, test, and predict a k Nearest Nighbours model. Built a UI to load feature vectors and labels. Optionally can create a brand new feature vector, and load labels.",
+        "hasSource": true,
+        "sourceLink":"https://github.com/ShounakA/project-team-b",
+        "hasDemo": false,
+        "tools": [
+            "Java",
+            "JavaX Swing"
+        ]
+
+    }    
 
 ]
