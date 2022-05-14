@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata: 
+  name: {{ template "shounaka-site.fullname" .}}-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app: {{ template "shounaka-site.fullname" .}}
+  template: 
+    metadata:
+      labels: 
+        app: {{ template "shounaka-site.fullname" .}}
+    spec: 
+      containers:
+      - name: {{ template "shounaka-site.name" .}}
+        image: ghcr.io/shounaka/{{ template "shounaka-site.name" .}}:1.0.0-widepeepoHappy
+      imagePullSecrets:
+      - name: pullsecret
+
+---
+
+kind: Service
+apiVersion: v1
+metadata: 
+  name: {{ template "shounaka-site.fullname" .}}-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: {{ template "shounaka-site.fullname" .}}
+  ports:
+    - port: 8080
+      targetPort: 3003
