@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: {{ template "shounaka-site.name" .}}-service
+spec:
+  type: {{.Values.service.type}}
+  selector:
+    app: {{ template "shounaka-site.name" .}}
+  ports:
+    - protocol: TCP
+      port: {{.Values.service.port}}
+      targetPort: {{ .Values.container.port}}
+      nodePort: {{.Values.service.nodePort}}
