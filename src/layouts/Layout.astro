@@ -1,0 +1,59 @@
+---
+import { TabNav } from '../components/TabNav';
+import { Nak } from '../components/nak';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<main>
+			<Nak client:visible />
+			<TabNav client:visible />
+		</main>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		@media (prefers-color-scheme: dark) {
+			--bg-color: #0A100D;
+			--fg-color: #F6F6F6;
+		}
+
+		@media (prefers-color-scheme: light) {
+			--bg-color: #F6F6F6;
+			--fg-color: #0A100D;
+		}
+		--accent: 0, 148, 198;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #c1ff9b 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: var(--bg-color);
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	main {
+		margin: auto;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-top: 1.5rem;
+		max-width: 60ch;
+	}
+	
+</style>

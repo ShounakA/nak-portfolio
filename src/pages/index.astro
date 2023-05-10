@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { DetailCard } from '../components/Card';
+---
+
+<Layout title="Shounak's Portfolio">
+	<section>
+		<DetailCard title="Hey I'm Shounak (nak)" body="I am a software developer with over three years experience in full-stack software developement. I have experience with many frontend libraries (like solidjs, react, angular) and backend frameoworks (nodejs, .net core, and spring boot)." client:visible />
+	</section>
+</Layout>
+
+<style>
+	section {
+		margin: auto;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-bottom: 1.5rem;
+		max-width: 60ch;
+	}
+	.link-card-grid {
+		display: flex;
+		flex-direction: column;
+	}
+
+</style>
