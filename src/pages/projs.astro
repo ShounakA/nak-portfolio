@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Card } from '../components/Card';
+---
+
+<Layout title="nak">
+	<section>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://github.com/ShounakA/prtl"
+				title="prtl"
+				body="Small tool to keep track of your tagged directories. Portal to tagged locations quickly."
+            client:visible
+			/>
+			<Card
+				href="https://github.com/ShounakA/nak-bot"
+				title="nak-bot"
+				body="Just a Discord bot. Beep Boop."
+            client:visible
+			/>
+			<Card
+				href="https://github.com/ShounakA/nak-auth"
+				title="nak-auth"
+				body="WIP: A personal authority server."
+            client:visible
+			/>
+			<Card
+				href="https://github.com/ShounakA/LootChest"
+				title="LootChest"
+				body="Your personal chest of loot!"
+            client:visible
+			/>
+			<div>
+				<Card
+				href="https://github.com/ShounakA"
+				title="@ShounakA"
+				body="See more on Github."
+				class="full-width"
+            client:visible
+				/>
+			</div>
+		</ul>
+	</section>
+</Layout>
+
+<style>
+	section {
+		margin: auto;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-bottom: 1.5rem;
+		max-width: 60ch;
+	}
+	.full-width {
+		width: 100%;
+	}
+</style>
