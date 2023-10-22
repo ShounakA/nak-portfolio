@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Card } from '../components/Card';
+import { GameGrid } from '../components/canvas-grid/GameGrid';
 ---
 
 <Layout title="nak">
-	<section>
-		<ul role="list" class="link-card-grid">
-			<span class="text-gradient">YOU PASSED!</span>
-		</ul>
+	<section class="link-card-grid">
+		<GameGrid numRows={100} numCols={100} cellSize={10} tickTime={250} client:only/>
 	</section>
 </Layout>
 
@@ -17,6 +15,5 @@ import { Card } from '../components/Card';
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 		padding-bottom: 1.5rem;
-		max-width: 60ch;
 	}
 </style>
