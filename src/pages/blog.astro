@@ -1,0 +1,41 @@
+---
+import BlogLayout from "../layouts/blog/BlogLayout.astro";
+import { RecentPosts } from '../components/blog/recent-posts'
+const posts = await Astro.glob('./posts/*.{md,mdx}');
+
+const getFeaturedPosts = (posts: any[]) => {
+    return posts.sort((a, b) => {
+    const aUrl = a.url.toLowerCase();
+    const bUrl = b.url.toLowerCase();
+        if (aUrl > bUrl) {
+            return -1;
+        }
+        if (aUrl < bUrl) {
+            return 1;
+        }
+        return 0;
+    }).slice(0, 8);
+}
+const sortedPosts = getFeaturedPosts(posts);
+
+---
+
+<BlogLayout title="Inject THIS">
+    <section>
+        <RecentPosts posts={sortedPosts} client:load/>
+    </section>
+</BlogLayout>
+
+<style>
+	section {
+		margin: auto;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-bottom: 1.5rem;
+		max-width: 60ch;
+	}
+    .link-card-grid {
+		display: flex;
+		flex-direction: row;
+	}
+</style>

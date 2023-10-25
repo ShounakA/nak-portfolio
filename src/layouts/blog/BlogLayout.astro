@@ -1,12 +1,13 @@
 ---
-import { Bar } from '../components/navigation/parts/bar';
-import { Nak } from '../components/nak';
-
+import { BlogTitle } from '../../components/nak';
+import { Bar } from '../../components/navigation/parts/bar';
 export interface Props {
-	title: string;
+	title?: string;
 }
 
 const { title } = Astro.props;
+
+const defaultTitle = title ?? 'Inject THIS';
 ---
 
 <!DOCTYPE html>
@@ -16,14 +17,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{defaultTitle}</title>
 	</head>
 	<body>
+		<div class="header">
+			<BlogTitle/>
+			<Bar client:visible/>
+		</div>
 		<main>
-			<Nak client:visible />
-			<Bar client:visible />
+			<slot />
 		</main>
-		<slot />
 	</body>
 </html>
 <style is:global>
@@ -43,17 +46,38 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: var(--bg-color);
+		color: var(--fg-color);
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	pre.astro-code {
+		background-color: #0A100D !important;
+		border-radius: 0.5rem;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
 	}
 	main {
 		margin: auto;
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 		padding-top: 1.5rem;
+		max-width: 80ch;
+	}
+	div.header {
+		margin: auto;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-top: 1.5rem;
 		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 2rem;
 	}
 	
 </style>

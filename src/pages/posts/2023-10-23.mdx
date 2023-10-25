@@ -1,0 +1,90 @@
+---
+layout: '../../layouts/blog/BlogLayout.astro'
+title: '0.1 - Create a blog with THIS'
+author: 'ShounakA'
+description: 'My first post! I go over how I created to site and what I want to post about.' 
+---
+
+# {frontmatter.title}
+### By: {frontmatter.author}
+
+<br/>
+
+_I have been playing around with Astro, and I have enjoyed using it to build my personal website._
+
+<br/>
+PS - If you're reading this you are already here! 
+
+`https://beta.shounaka.com/blog`
+<br/>
+I recently migrated my personal website, and it was a much needed migration. The original site was built with JQuery and hosted with [GitHub Pages](https://pages.github.com/). Now, it has moved to [Astro 🚀](https://astro.build/) hosted with [Vercel](https://vercel.com/home)! I also want to add a blog site to my personal site because I want document and log some of my projects. 
+<br/>
+This is just part 1 of an N number of series! 
+
+<br/>
+This part will cover just the simple layout, featured page, and basics of how posts are made. 
+
+## The Layout
+
+I want to make a simple layout. I just need to display the title of the blog at the top, keep the same navigation bar as my main site, and then show the markdown post underneath.
+
+Here's what the body looks includes:
+
+```jsx
+<main>
+    <BlogTitle />
+    <Bar client:load />
+    <slot />
+</main>
+
+```
+All the markdown content goes into the `<slot />`. My nav bar has some animations, so I need to tell Astro to load the javascript after the page loads. 
+
+That's it. Very simple!
+
+## The Posts
+
+I don't plan to make posts often, and I don't need any fancy tools to upload posts. I'll keep it very simple and add posts by adding .md or .mdx pages to my `pages/posts/*` route. Pages are added by making a PR to the blog site repository. 
+
+```
+pages/
+ |-- posts/
+    |-- first post.md
+    |-- another post.mdx
+```
+And of course! Each of these pages will use the blog layout, so it has the same look for all pages. 
+
+But there is one problem, you have to know the page route to access any posts! That wont work 😔. 
+
+<br/> Lets make a featured posts page 😎. 
+
+## The Featured Page
+
+I just want to list out all my posts in a nice card fashion like I do for everything else on the site!
+Ordered by most recent first. But how can I access all my posts? They are just files, and I cannot fetch these posts from a server, I dont have one! 
+
+Enter: `Astro.glob`
+
+I created a `/blog` astro component. It will grab all components that match the glob filter.
+
+```astro
+---
+const posts = await Astro.glob('./posts/*.{md,mdx}');
+const sortedPosts = getFeaturedPosts(posts);
+---
+
+<BlogLayout title="Inject THIS">
+    <section>
+        <RecentPosts posts={sortedPosts} client:load />
+    </section>
+</BlogLayout>
+
+```
+
+I pass the `posts` into another component to handle creating the featured posts list. This component uses an existing Card component that has animations, so we need to tell Astro to load that javascript on this component. 
+
+## Conclusion
+
+With the `/blog` page done, that covers everything for this post! I have a layout that each posts uses so each post is looks consistent. I have a way to add posts, via GitHub. Finally, I have a page to see my most recent posts. You can utilise a bunch of out-of-the-box features of Astro to get your very own blog site up an running today!
+
+I used [Astro Guide](https://docs.astro.build/en/guides/integrations-guide/mdx/) + a handfull of other [Astro Docs](https://docs.astro.build/en/getting-started/) to get this started, and so can you!
