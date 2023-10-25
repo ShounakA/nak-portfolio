@@ -1,4 +1,4 @@
-import { Component, Show, createSignal, onMount } from 'solid-js';
+import { type Component, Show, createSignal, onMount } from 'solid-js';
 import { Motion } from '@motionone/solid';
 import { spring } from 'motion';
 import './Card.css';
@@ -17,7 +17,10 @@ export const Card: Component<{
 	body: string,
 	href: string,
    class?: string,
+   linkTarget?: string,
 }> = (props)  => {
+
+   const target = props.linkTarget ?? '_blank';
    return (
    <Motion.li 
       initial={{
@@ -44,7 +47,7 @@ export const Card: Component<{
       }} 
       class={`link-card ${props.class}`}
    >
-      <a href={props.href} target="_blank">
+      <a href={props.href} target={target}>
          <h2>
             {props.title}
             <span>&rarr;</span>

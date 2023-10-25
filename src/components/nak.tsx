@@ -17,3 +17,11 @@ export function Nak() {
       </Motion.h1>
    );
  }
+
+ export function BlogTitle() {
+   return (
+      <div class="text-gradient">
+         <h1>Inject THIS</h1>
+      </div>
+   );
+ }
