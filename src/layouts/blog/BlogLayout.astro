@@ -15,7 +15,9 @@ export interface Props {
 const { frontmatter } = Astro.props;
 const { title, description, author, twitter } = frontmatter;
 
-const pageTitle = `${title} | ${author} (${twitter})`;
+let pageTitle = `${title} | ${author}`;
+if (twitter) 
+	pageTitle = `${title} | ${author} (${twitter})`;
 ---
 
 <!DOCTYPE html>
@@ -28,12 +30,12 @@ const pageTitle = `${title} | ${author} (${twitter})`;
 			basic: {
 				title,
 				type: "website",
-				url: Astro.site,
+				url: new URL(Astro.url.pathname, 'https://beta.shounaka.com'),
 				image: 'https://avatars.githubusercontent.com/u/16951585?v=4'
 			}
 		 }}
 		 twitter={{
-				creator: '@AmladiShounak',
+				creator: twitter,
 		 }}
 		 />
 		<meta charset="UTF-8" />

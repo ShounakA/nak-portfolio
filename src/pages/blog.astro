@@ -18,7 +18,11 @@ const getFeaturedPosts = (posts: any[]) => {
 }
 const sortedPosts = getFeaturedPosts(posts);
 
-const data = { title: "Inject THIS", description: "Welcome to Inject THIS! A Blog about some of my dumb fun projects." };
+const data = { 
+    title: "Inject THIS", 
+    description: "Welcome to Inject THIS! A Blog about some of my dumb fun projects.", 
+    author: 'ShounakA' 
+};
 ---
 
 <BlogLayout frontmatter={data}>
