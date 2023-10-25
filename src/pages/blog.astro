@@ -18,9 +18,10 @@ const getFeaturedPosts = (posts: any[]) => {
 }
 const sortedPosts = getFeaturedPosts(posts);
 
+const data = { title: "Inject THIS", description: "Welcome to Inject THIS! A Blog about some of my dumb fun projects." };
 ---
 
-<BlogLayout title="Inject THIS">
+<BlogLayout frontmatter={data}>
     <section>
         <RecentPosts posts={sortedPosts} client:load/>
     </section>

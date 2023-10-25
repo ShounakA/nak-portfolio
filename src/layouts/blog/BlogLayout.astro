@@ -1,23 +1,45 @@
 ---
 import { BlogTitle } from '../../components/nak';
 import { Bar } from '../../components/navigation/parts/bar';
+import { SEO } from "astro-seo";
+
 export interface Props {
-	title?: string;
+	frontmatter?: {
+		title: string;
+		description: string;
+		author?: string;
+		twitter?: string;
+	};
 }
 
-const { title } = Astro.props;
+const { frontmatter } = Astro.props;
+const { title, description, author, twitter } = frontmatter;
 
-const defaultTitle = title ?? 'Inject THIS';
+const pageTitle = `${title} | ${author} (${twitter})`;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<SEO
+		 title={pageTitle}
+		 description={description}
+		 openGraph={{
+			basic: {
+				title,
+				type: "website",
+				url: Astro.site,
+				image: 'https://avatars.githubusercontent.com/u/16951585?v=4'
+			}
+		 }}
+		 twitter={{
+				creator: '@AmladiShounak',
+		 }}
+		 />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{defaultTitle}</title>
 	</head>
 	<body>
 		<div class="header">

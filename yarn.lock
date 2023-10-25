@@ -1486,6 +1486,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astro-seo@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "astro-seo@npm:0.8.0"
+  checksum: ed79c09293e620f323afa17a3e86913143cd3e3955dce5cc1b8e9890e1f00abff9eefeac6c0ae7f5c4848b57158b67c67db262c018aa7e94070418773cf993d2
+  languageName: node
+  linkType: hard
+
 "astro@npm:^3.3.2":
   version: 3.3.2
   resolution: "astro@npm:3.3.2"
@@ -5343,6 +5350,7 @@ __metadata:
     "@astrojs/solid-js": ^3.0.2
     "@motionone/solid": ^10.16.4
     astro: ^3.3.2
+    astro-seo: ^0.8.0
     motion: ^10.16.4
     remark-toc: ^9.0.0
     solid-js: ^1.8.3
