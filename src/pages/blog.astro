@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "../layouts/blog/BlogLayout.astro";
 import { RecentPosts } from '../components/blog/recent-posts'
+import { Card } from "../components/Card";
 const posts = await Astro.glob('./posts/*.{md,mdx}');
 
 const getFeaturedPosts = (posts: any[]) => {
@@ -28,6 +29,18 @@ const data = {
 <BlogLayout frontmatter={data}>
     <section>
         <RecentPosts posts={sortedPosts} client:load/>
+    </section>
+    <section>
+        <h2 class="">Medium Posts</h2>
+        <ul role="list" class="link-card-grid">
+            <Card 
+                title={"How ‘roids’ helped me learn dependency injection"} 
+                body={"How I built ‘roids’ to gain some experience in Go and better understand how dependency injection might work elsewhere."} 
+                href={"https://medium.com/@shounak.p.amladi/how-roids-helped-me-learn-dependency-injection-27a441175603"} 
+                linkTarget=""
+                client:visible
+            />
+        </ul>
     </section>
 </BlogLayout>
 
